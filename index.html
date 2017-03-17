@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>coffeerun</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.2/css/bootstrap-slider.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body class="container">
+    <header>
+        <h1>CoffeeRun</h1>
+    </header>
+    <section>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form data-coffee-order="form">
+                    <div class="form-group">
+                        <label for="coffeeOrder">Coffee Order</label>
+                        <input class="form-control" name="coffee" id="coffeeOrder" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailInput">Email</label>
+                        <input class="form-control" type="email" name="emailAddress" id="emailInput" value="" placeholder="dr@who.com">
+                    </div>
+                    <div class=" radio ">
+                        <label for="">
+                    <input type="radio" name="size" value="short">
+                    Short
+                  </label>
+                    </div>
+                    <div class=" radio ">
+                        <label for="">
+                    <input type="radio" name="size" value="tall" checked>
+                    Tall
+                  </label>
+                    </div>
+                    <div class=" radio ">
+                        <label for="">
+                    <input type="radio" name="size" value="grande">
+                    Grande
+                  </label>
+                    </div>
+                    <div class="radio">
+                        <label for="">
+                  <input type="radio" name="size" value="coffee-zilla">
+                  coffee-zilla
+                </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="flavorShot">Flavor Shot</label>
+                        <select id="flavorShot" class="form-control" name="flavor">
+                      <option value="">None</option>
+                      <option value="caramel">Caramel</option>
+                      <option value="almond">Almond</option>
+                      <option value="mocha">Mocha</option>
+                    </select>
+                    </div>
+
+
+                    <div class="goldachieve">
+                        <div class="form-group">
+                            <label for="achievement">Achievement!</label>
+
+
+                            <label><input type="checkbox" value="power">Super Powers</label>
+                            <label><input type="checkbox"  value="time">Time Control</label>
+                            <label><input type="checkbox" value="bug">Bug Free Code</label>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="strenghtLevel" id="caffeinestr">Caffeine Rating:</label>
+                        <!--  <input type="text" size="2" id="SliderVal" value="30">-->
+                        <input name="displayme" id="SliderVal" readonly style="border:0; font-weight:bold;">
+                        <input type="range" name="strength" id="strengthLevel" value="30">
+                        <!--onchange="showValue(this.value)"-->
+                        <!--onchange="showValue(this.value)"-->
+
+                    </div>
+
+                    <button type="submit" class="btn btn-default" >Submit</button>
+                    <button type="reset" class="btn btn-default" onclick="window.location.reload(true)">Reset</button>
+
+
+
+
+
+                    <div id="myModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <label>  <input id="modalMsg" readonly style="border:0; font-weight:bold; padding: auto;">achievement unlocked</label>
+
+
+                            <button type="yes" id="yes" class="btn btn-default" >Yes</button>
+                            <button type="no" id="no" class="btn btn-default" >No</button>
+                        </div>
+
+                    </div>
+
+
+
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js">
+    </script>
+
+    <script src="scripts/formhandler.js" charset="utf-8">
+    </script>
+    <script src="scripts/datastore.js" charset="utf-8">
+    </script>
+    <script src="scripts/truck.js" charset="utf-8">
+    </script>
+    <script src="scripts/main.js" charset="utf-8">
+    </script>
+    <script src="scripts/slider.js" charset="utf-8">
+    </script>
+
+</body>
+
+</html>
